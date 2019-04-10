@@ -18,13 +18,13 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public List<Question> getQuestionsByPaperTitle(String paperTitle){
-        return questionRepo.getAllByPaperTitle(paperTitle);
+    public Question getQuestionsByPaperTitleAndQuestionNumber(String paperTitle, int questionNumber){
+        return questionRepo.getByPaperTitleAndQuestionNumber(paperTitle,questionNumber);
     }
 
     @Override
-    public String getQuestionAnswerByQuestionBody(String questionBody){
-        Question question = questionRepo.getByQuestionBody(questionBody);
+    public String getQuestionAnswerByPaperTitleAndQuestionNumber(String paperTitle, int questionNumber){
+        Question question = questionRepo.getByPaperTitleAndQuestionNumber(paperTitle,questionNumber);
         return question.getQuestionAnswer();
     }
 

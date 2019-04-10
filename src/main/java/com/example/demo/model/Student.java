@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import org.springframework.stereotype.Controller;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,21 +18,21 @@ public class Student {
     @Column(name = "studentPassword")
     private String studentPassword;
 
-    @Column(name = "joinedSession")
-    private String joinedSession;
+    @Column(name = "savedQuestionBody")
+    private String savedQuestionBody;
 
-    @Column(name = "joinedSessionScore")
-    private float joinedSessionScore;
+    @Column(name = "savedQuestionAnswer")
+    private String savedQuestionAnswer;
 
     public Student(){
 
     }
 
-    public Student(String studentName, String studentPassword, String joinedSession, float joinedSessionScore) {
+    public Student(String studentName, String studentPassword, String savedQuestionBody, String savedQuestionAnswer) {
         this.studentName = studentName;
         this.studentPassword = studentPassword;
-        this.joinedSession = joinedSession;
-        this.joinedSessionScore = joinedSessionScore;
+        this.savedQuestionBody = savedQuestionBody;
+        this.savedQuestionAnswer = savedQuestionAnswer;
     }
 
     public String getStudentName() {
@@ -49,19 +51,19 @@ public class Student {
         this.studentPassword = studentPassword;
     }
 
-    public String getJoinedSession() {
-        return joinedSession;
+    public String getSavedQuestionBody() {
+        return savedQuestionBody;
     }
 
-    public void setJoinedSession(String joinedSession) {
-        this.joinedSession = joinedSession;
+    public void setSavedQuestionBody(String savedQuestionBody) {
+        this.savedQuestionBody = savedQuestionBody;
     }
 
-    public float getJoinedSessionScore() {
-        return joinedSessionScore;
+    public String getSavedQuestionAnswer() {
+        return savedQuestionAnswer;
     }
 
-    public void setJoinedSessionScore(float joinedSessionScore) {
-        this.joinedSessionScore = joinedSessionScore;
+    public void setSavedQuestionAnswer(String savedQuestionAnswer) {
+        this.savedQuestionAnswer = savedQuestionAnswer;
     }
 }

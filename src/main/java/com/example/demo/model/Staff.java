@@ -13,6 +13,9 @@ public class Staff {
     @Column(name = "staffName")
     private String staffName;
 
+    @Column(name = "staffPassword")
+    private String staffPassword;
+
     @Column(name = "paperTitle")
     private String paperTitle;
 
@@ -20,8 +23,9 @@ public class Staff {
 
     }
 
-    public Staff(String staffName, String paperTitle) {
+    public Staff(String staffName, String staffPassword, String paperTitle) {
         this.staffName = staffName;
+        this.staffPassword = staffPassword;
         this.paperTitle = paperTitle;
     }
 
@@ -31,6 +35,14 @@ public class Staff {
 
     public void setStaffName(String staffName) {
         this.staffName = staffName;
+    }
+
+    public String getStaffPassword() {
+        return staffPassword;
+    }
+
+    public void setStaffPassword(String staffPassword) {
+        this.staffPassword = staffPassword;
     }
 
     public String getPaperTitle() {

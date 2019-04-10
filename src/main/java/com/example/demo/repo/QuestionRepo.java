@@ -11,7 +11,7 @@ public interface QuestionRepo extends JpaRepository<Question, String> {
 
     Question getByQuestionBody(String questionBody);
 
-
+    Question getByPaperTitleAndQuestionNumber(String paperTitle, int questionNumber);
 
     Question save(Question question);
 }

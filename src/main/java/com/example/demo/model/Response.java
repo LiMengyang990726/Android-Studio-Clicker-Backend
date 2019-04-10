@@ -9,31 +9,31 @@ import javax.persistence.Table;
 @Table(name = "Response")
 public class Response {
 
-    @Column(name = "paperTitle")
-    private String paperTitle;
+    @Column(name = "sessionNumber")
+    private long sessionNumber;
 
     @Column(name = "questionNumber")
     private int questionNumber;
 
-    @Column(name = "choice")
-    private char choice;
+    @Column(name = "studentChoice")
+    private String studentChoice;
 
     public Response(){
 
     }
 
-    public Response(String paperTitle, int questionNumber, char choice) {
-        this.paperTitle = paperTitle;
+    public Response(long sessionNumber, int questionNumber, String studentChoice) {
+        this.sessionNumber = sessionNumber;
         this.questionNumber = questionNumber;
-        this.choice = choice;
+        this.studentChoice = studentChoice;
     }
 
-    public String getPaperTitle() {
-        return paperTitle;
+    public long getSessionNumber() {
+        return sessionNumber;
     }
 
-    public void setPaperTitle(String paperTitle) {
-        this.paperTitle = paperTitle;
+    public void setSessionNumber(long sessionNumber) {
+        this.sessionNumber = sessionNumber;
     }
 
     public int getQuestionNumber() {
@@ -44,11 +44,11 @@ public class Response {
         this.questionNumber = questionNumber;
     }
 
-    public char getChoice() {
-        return choice;
+    public String getStudentChoice() {
+        return studentChoice;
     }
 
-    public void setChoice(char choice) {
-        this.choice = choice;
+    public void setStudentChoice(String studentChoice) {
+        this.studentChoice = studentChoice;
     }
 }

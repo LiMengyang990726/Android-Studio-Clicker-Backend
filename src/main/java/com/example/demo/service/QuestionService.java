@@ -8,9 +8,9 @@ public interface QuestionService {
 
     List<Question> getAllQuestions();
 
-    List<Question> getQuestionsByPaperTitle(String paperTitle);
+    Question getQuestionsByPaperTitleAndQuestionNumber(String paperTitle, int questionNumber);
 
-    String getQuestionAnswerByQuestionBody(String questionBody);
+    String getQuestionAnswerByPaperTitleAndQuestionNumber(String paperTitle, int questionNumber);
 
     Question addQuestion(Question question);
 

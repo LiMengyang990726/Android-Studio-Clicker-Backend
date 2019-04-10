@@ -1,5 +1,11 @@
 package com.example.demo.service;
 
+import com.example.demo.model.Response;
+
+import java.util.List;
+
 public interface ResponseService {
-    float getAverageScore(String paperTitle);
+    List<Response> getAllResponses(long sessionNumber);
+
+    float getSessionAverageScore(long sessionNumber);
 }
