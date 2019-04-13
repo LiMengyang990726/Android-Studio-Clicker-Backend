@@ -15,7 +15,7 @@ public class StaffController {
     private StaffService staffService;
 
     // use for logging in page
-    @GetMapping("/")
+    @GetMapping("/checkpassword")
     public boolean checkPassword(
             @RequestParam String staffName,
             @RequestParam String staffPassword

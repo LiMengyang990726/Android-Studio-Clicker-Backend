@@ -9,6 +9,7 @@ import javax.persistence.Table;
 @Table(name = "Response")
 public class Response {
 
+    @Id
     @Column(name = "sessionNumber")
     private long sessionNumber;
 

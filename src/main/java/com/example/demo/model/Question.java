@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Questioon")
+@Table(name = "Question")
 public class Question {
 
     @Id
@@ -18,9 +18,6 @@ public class Question {
 
     @Column(name = "questionBody")
     private String questionBody;
-
-    @Column(name = "questionImportance")
-    private String questionImportance;
 
     @Column(name = "questionAnswerA")
     private String questionAnswerA;
@@ -41,11 +38,10 @@ public class Question {
 
     }
 
-    public Question(String paperTitle, int questionNumber, String questionBody, String questionImportance, String questionAnswerA, String questionAnswerB, String questionAnswerC, String questionAnswerD, String questionAnswer) {
+    public Question(String paperTitle, int questionNumber, String questionBody, String questionAnswerA, String questionAnswerB, String questionAnswerC, String questionAnswerD, String questionAnswer) {
         this.paperTitle = paperTitle;
         this.questionNumber = questionNumber;
         this.questionBody = questionBody;
-        this.questionImportance = questionImportance;
         this.questionAnswerA = questionAnswerA;
         this.questionAnswerB = questionAnswerB;
         this.questionAnswerC = questionAnswerC;
@@ -75,14 +71,6 @@ public class Question {
 
     public void setQuestionBody(String questionBody) {
         this.questionBody = questionBody;
-    }
-
-    public String getQuestionImportance() {
-        return questionImportance;
-    }
-
-    public void setQuestionImportance(String questionImportance) {
-        this.questionImportance = questionImportance;
     }
 
     public String getQuestionAnswerA() {
