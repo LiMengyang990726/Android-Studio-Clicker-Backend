@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/staff")
@@ -13,6 +14,14 @@ public class StaffController {
 
     @Autowired
     private StaffService staffService;
+
+    // use for checking
+    @GetMapping("/")
+    public List<Staff> getAll(
+            @RequestParam String staffName
+    ){
+        return staffService.getAllStaff(staffName);
+    }
 
     // use for logging in page
     @GetMapping("/checkpassword")
@@ -32,12 +41,10 @@ public class StaffController {
     }
 
     // use for creating paper activity
-    @PutMapping("/createpaper")
+    @PostMapping("/createpaper")
     public Staff addPaper(
-            @Valid @RequestBody String staffName,
-            @Valid @RequestBody String staffPassword,
-            @Valid @RequestBody String paperTitle
+            @Valid @RequestBody Staff staff
     ){
-        return staffService.saveNewPaper(staffName,staffPassword,paperTitle);
+        return staffService.saveNewPaper(staff);
     }
 }

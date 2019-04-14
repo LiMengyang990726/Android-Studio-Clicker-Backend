@@ -1,15 +1,16 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Question")
 public class Question {
 
     @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private int id;
+
     @Column(name = "paperTitle")
     private String paperTitle;
 

@@ -20,6 +20,14 @@ public class QuestionController {
         return questionService.getAllQuestions();
     }
 
+    @GetMapping("/nextquestion")
+    public Question getNextQuestion(
+            @RequestParam String paperTitle,
+            @RequestParam int questionNumber
+    ){
+        return questionService.getQuestionsByPaperTitleAndQuestionNumber(paperTitle,questionNumber);
+    }
+
     @PostMapping("/postquestion")
     public Question addQuestion(
             @Valid @RequestBody Question question

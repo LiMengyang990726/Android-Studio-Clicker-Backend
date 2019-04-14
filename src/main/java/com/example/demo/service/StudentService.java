@@ -7,7 +7,7 @@ public interface StudentService {
 
     boolean checkPassword(String studentName, String studentPassword);
 
-    String[] getAllSavedQuestionBody(String studentName);
-
-    String[] getAllSavedQuestionAnswer(String studentName);
+//    String[] getAllSavedQuestionBody(String studentName);
+//
+//    String[] getAllSavedQuestionAnswer(String studentName);
 }

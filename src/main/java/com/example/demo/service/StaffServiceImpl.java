@@ -13,6 +13,11 @@ public class StaffServiceImpl implements StaffService{
     StaffRepo staffRepo;
 
     @Override
+    public List<Staff> getAllStaff(String staffName){
+        return staffRepo.findAllByStaffName(staffName);
+    }
+
+    @Override
     public boolean checkPassword(String staffName, String staffPassword){
         String actualStaffPassword = staffRepo.getByStaffName(staffName).get(0).getStaffPassword();
         return (staffPassword.equals(actualStaffPassword));
@@ -24,13 +29,13 @@ public class StaffServiceImpl implements StaffService{
         String[] paperTitles = new String[staffs.size()];
         for(int i = 0; i < staffs.size(); i++){
             paperTitles[i] = staffs.get(i).getPaperTitle();
+            System.out.println(paperTitles[i]);
         }
         return paperTitles;
     }
 
     @Override
-    public Staff saveNewPaper(String staffName, String staffPassword, String paperTitle){
-        Staff staff = new Staff(staffName,staffPassword,paperTitle);
+    public Staff saveNewPaper(Staff staff){
         return staffRepo.save(staff);
     }
 }

@@ -23,13 +23,13 @@ public class StudentController {
         return studentService.checkPassword(studentName,studentPassword);
     }
 
-    // use for pulling out the saved question
-    @GetMapping("/savedquestion")
-    public String[] getQuestion(
-            @RequestParam String studentName
-    ){
-        String[] savedQuestionAnswers = studentService.getAllSavedQuestionAnswer(studentName);
-        String[] savedQuestionBodies = studentService.getAllSavedQuestionBody(studentName);
-        return savedQuestionAnswers;
-    }
+//    // use for pulling out the saved question
+//    @GetMapping("/savedquestion")
+//    public String[] getQuestion(
+//            @RequestParam String studentName
+//    ){
+//        String[] savedQuestionAnswers = studentService.getAllSavedQuestionAnswer(studentName);
+//        String[] savedQuestionBodies = studentService.getAllSavedQuestionBody(studentName);
+//        return savedQuestionAnswers;
+//    }
 }

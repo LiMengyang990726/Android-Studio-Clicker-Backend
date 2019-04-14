@@ -18,23 +18,23 @@ public class StudentServiceImpl implements StudentService {
         return studentPassword.equals(actualStudentPassword);
     }
 
-    @Override
-    public String[] getAllSavedQuestionBody(String studentName){
-        List<Student> students = studentRepo.getByStudentName(studentName);
-        String[] questionBodies = new String[students.size()];
-        for(int i = 0; i < students.size();i++){
-            questionBodies[i] = students.get(i).getSavedQuestionBody();
-        }
-        return questionBodies;
-    }
-
-    @Override
-    public String[] getAllSavedQuestionAnswer(String studentName){
-        List<Student> students = studentRepo.getByStudentName(studentName);
-        String[] questionAnswers = new String[students.size()];
-        for(int i = 0; i < students.size();i++){
-            questionAnswers[i] = students.get(i).getSavedQuestionAnswer();
-        }
-        return questionAnswers;
-    }
+//    @Override
+//    public String[] getAllSavedQuestionBody(String studentName){
+//        List<Student> students = studentRepo.getByStudentName(studentName);
+//        String[] questionBodies = new String[students.size()];
+//        for(int i = 0; i < students.size();i++){
+//            questionBodies[i] = students.get(i).getSavedQuestionBody();
+//        }
+//        return questionBodies;
+//    }
+//
+//    @Override
+//    public String[] getAllSavedQuestionAnswer(String studentName){
+//        List<Student> students = studentRepo.getByStudentName(studentName);
+//        String[] questionAnswers = new String[students.size()];
+//        for(int i = 0; i < students.size();i++){
+//            questionAnswers[i] = students.get(i).getSavedQuestionAnswer();
+//        }
+//        return questionAnswers;
+//    }
 }

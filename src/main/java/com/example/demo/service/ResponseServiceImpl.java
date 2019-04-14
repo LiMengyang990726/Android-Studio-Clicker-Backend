@@ -45,4 +45,56 @@ public class ResponseServiceImpl implements ResponseService{
         return result;
     }
 
+    @Override
+    public Response addNewResponse(Response response){
+        return responseRepo.save(response);
+    }
+
+    @Override
+    public int getNumberOfAResponse(long sessionNumber){
+        List<Response> responses = responseRepo.getAllBySessionNumber(sessionNumber);
+        int result = 0;
+        for(int i = 0; i < responses.size(); i++){
+            if(responses.get(i).getStudentChoice().equals("A")){
+                result += 1;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public int getNumberOfBResponse(long sessionNumber){
+        List<Response> responses = responseRepo.getAllBySessionNumber(sessionNumber);
+        int result = 0;
+        for(int i = 0; i < responses.size(); i++){
+            if(responses.get(i).getStudentChoice().equals("B")){
+                result += 1;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public int getNumberOfCResponse(long sessionNumber){
+        List<Response> responses = responseRepo.getAllBySessionNumber(sessionNumber);
+        int result = 0;
+        for(int i = 0; i < responses.size(); i++){
+            if(responses.get(i).getStudentChoice().equals("C")){
+                result += 1;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public int getNumberOfDResponse(long sessionNumber){
+        List<Response> responses = responseRepo.getAllBySessionNumber(sessionNumber);
+        int result = 0;
+        for(int i = 0; i < responses.size(); i++){
+            if(responses.get(i).getStudentChoice().equals("D")){
+                result += 1;
+            }
+        }
+        return result;
+    }
 }

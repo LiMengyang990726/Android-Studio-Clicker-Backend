@@ -19,7 +19,13 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Question getQuestionsByPaperTitleAndQuestionNumber(String paperTitle, int questionNumber){
-        return questionRepo.getByPaperTitleAndQuestionNumber(paperTitle,questionNumber);
+        List<Question> questions = questionRepo.getAllByPaperTitle(paperTitle);
+        for(int i = 0; i < questions.size(); i++){
+            if(questions.get(i).getQuestionNumber() == questionNumber){
+                return questions.get(i);
+            }
+        }
+        return null;
     }
 
     @Override

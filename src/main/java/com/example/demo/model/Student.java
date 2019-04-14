@@ -18,21 +18,14 @@ public class Student {
     @Column(name = "studentPassword")
     private String studentPassword;
 
-    @Column(name = "savedQuestionBody")
-    private String savedQuestionBody;
-
-    @Column(name = "savedQuestionAnswer")
-    private String savedQuestionAnswer;
 
     public Student(){
 
     }
 
-    public Student(String studentName, String studentPassword, String savedQuestionBody, String savedQuestionAnswer) {
+    public Student(String studentName, String studentPassword) {
         this.studentName = studentName;
         this.studentPassword = studentPassword;
-        this.savedQuestionBody = savedQuestionBody;
-        this.savedQuestionAnswer = savedQuestionAnswer;
     }
 
     public String getStudentName() {
@@ -51,19 +44,5 @@ public class Student {
         this.studentPassword = studentPassword;
     }
 
-    public String getSavedQuestionBody() {
-        return savedQuestionBody;
-    }
 
-    public void setSavedQuestionBody(String savedQuestionBody) {
-        this.savedQuestionBody = savedQuestionBody;
-    }
-
-    public String getSavedQuestionAnswer() {
-        return savedQuestionAnswer;
-    }
-
-    public void setSavedQuestionAnswer(String savedQuestionAnswer) {
-        this.savedQuestionAnswer = savedQuestionAnswer;
-    }
 }

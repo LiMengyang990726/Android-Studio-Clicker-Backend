@@ -6,8 +6,7 @@ import javax.persistence.*;
 @Table(name = "Session")
 public class Session {
     @Id
-    @GeneratedValue
-    @Column(name = "sessionNumber", updatable = false, nullable = false)
+    @Column(name = "sessionNumber")
     private long sessionNumber;
 
 
