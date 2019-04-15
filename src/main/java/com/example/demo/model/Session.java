@@ -9,9 +9,10 @@ public class Session {
     @Column(name = "sessionNumber")
     private long sessionNumber;
 
-
     @Column(name = "paperTitle")
     private String paperTitle;
+
+
 
     public Session(){
 
@@ -32,4 +33,5 @@ public class Session {
     public void setPaperTitle(String paperTitle) {
         this.paperTitle = paperTitle;
     }
+
 }

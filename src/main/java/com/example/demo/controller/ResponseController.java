@@ -20,22 +20,23 @@ public class ResponseController {
         return responseService.addNewResponse(response);
     }
 
-    @GetMapping("/getscore")
-    public float getSessionAverageScore(
-            @RequestParam long sessionNumber
-    ){
-        return responseService.getSessionAverageScore(sessionNumber);
-    }
+//    @GetMapping("/getscore")
+//    public float getSessionAverageScore(
+//            @RequestParam long sessionNumber
+//    ){
+//        return responseService.getSessionAverageScore(sessionNumber);
+//    }
 
     @GetMapping("/getresponse")
     public int[] getAllResponse(
-            @RequestParam long sessionNumber
+            @RequestParam long sessionNumber,
+            @RequestParam int questionNumber
     ){
         int[] result = new int[4];
-        result[0] = responseService.getNumberOfAResponse(sessionNumber);
-        result[1] = responseService.getNumberOfBResponse(sessionNumber);
-        result[2] = responseService.getNumberOfCResponse(sessionNumber);
-        result[3] = responseService.getNumberOfDResponse(sessionNumber);
+        result[0] = responseService.getNumberOfAResponse(sessionNumber, questionNumber);
+        result[1] = responseService.getNumberOfBResponse(sessionNumber, questionNumber);
+        result[2] = responseService.getNumberOfCResponse(sessionNumber, questionNumber);
+        result[3] = responseService.getNumberOfDResponse(sessionNumber, questionNumber);
         return result;
     }
 }

@@ -1,6 +1,9 @@
 package com.example.demo.model;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Response")
@@ -19,6 +22,9 @@ public class Response {
 
     @Column(name = "studentChoice")
     private String studentChoice;
+
+//    @CreationTimestamp
+//    private LocalDateTime createDateTime;
 
     public Response(){
 

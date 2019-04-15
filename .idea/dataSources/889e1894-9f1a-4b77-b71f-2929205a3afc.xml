@@ -1105,55 +1105,58 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="277" parent="2" name="Question"/>
-    <table id="278" parent="2" name="Response">
+    <table id="278" parent="2" name="Session">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="279" parent="2" name="Session">
+    <table id="279" parent="2" name="Staff"/>
+    <table id="280" parent="2" name="Student"/>
+    <table id="281" parent="2" name="hibernate_sequence">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="280" parent="2" name="Staff"/>
-    <table id="281" parent="2" name="Student"/>
-    <table id="282" parent="2" name="hibernate_sequence">
-      <Engine>MyISAM</Engine>
-    </table>
-    <column id="283" parent="277" name="paperTitle">
+    <column id="282" parent="277" name="paperTitle">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="277" name="questionNumber">
+    <column id="283" parent="277" name="questionNumber">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="277" name="questionBody">
+    <column id="284" parent="277" name="questionBody">
       <Position>3</Position>
       <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="277" name="questionAnswerA">
+    <column id="285" parent="277" name="questionAnswerA">
       <Position>4</Position>
       <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="277" name="questionAnswerB">
+    <column id="286" parent="277" name="questionAnswerB">
       <Position>5</Position>
       <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="277" name="questionAnswerC">
+    <column id="287" parent="277" name="questionAnswerC">
       <Position>6</Position>
       <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="277" name="questionAnswerD">
+    <column id="288" parent="277" name="questionAnswerD">
       <Position>7</Position>
       <DataType>varchar(1000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="277" name="questionAnswer">
+    <column id="289" parent="277" name="questionAnswer">
       <Position>8</Position>
       <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="290" parent="277" name="id">
+      <Position>9</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="291" parent="278" name="sessionNumber">
@@ -1162,63 +1165,42 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="278" name="questionNumber">
+    <column id="292" parent="278" name="paperTitle">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="293" parent="278" name="studentChoice">
-      <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="294" parent="278" name="PRIMARY">
+    <key id="293" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sessionNumber</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="295" parent="279" name="sessionNumber">
+    <column id="294" parent="279" name="staffName">
       <Position>1</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="279" name="staffPassword">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="296" parent="279" name="paperTitle">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="297" parent="279" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>sessionNumber</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="298" parent="280" name="staffName">
-      <Position>1</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="299" parent="280" name="staffPassword">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="300" parent="280" name="paperTitle">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="281" name="studentName">
+    <column id="297" parent="280" name="studentName">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="281" name="studentPassword">
+    <column id="298" parent="280" name="studentPassword">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="282" name="next_val">
+    <column id="299" parent="281" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>

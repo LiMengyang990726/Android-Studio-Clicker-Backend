@@ -8,4 +8,6 @@ import java.util.List;
 public interface ResponseRepo extends JpaRepository<Response, String> {
 
     List<Response> getAllBySessionNumber(long sessionNumber);
+
+    List<Response> getAllBySessionNumberAndQuestionNumber(long sessionNumber, int questionNumber);
 }
